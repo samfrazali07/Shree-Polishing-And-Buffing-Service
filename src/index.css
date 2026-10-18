@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens: charcoal, ivory, champagne gold, bronze ---------- */
+@theme {
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-charcoal: #0d0d0d;
+  --color-charcoal-soft: #151413;
+  --color-graphite: #1f1d1b;
+  --color-ivory: #f7f3ea;
+  --color-ivory-deep: #efe7d6;
+  --color-champagne: #c9a96e;
+  --color-champagne-light: #e3cfa6;
+  --color-bronze: #8c6a43;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-charcoal font-sans text-ivory antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-normal;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-champagne);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-champagne);
+    color: var(--color-charcoal);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[11px] font-medium uppercase tracking-[0.32em] text-champagne;
+  }
+
+  .gold-rule {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, var(--color-champagne), transparent);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-3 bg-champagne px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-charcoal transition-colors duration-500 hover:bg-champagne-light focus-visible:outline-champagne disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-3 border border-ivory/50 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-ivory transition-colors duration-500 hover:border-champagne hover:text-champagne;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-3 border border-charcoal/40 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-charcoal transition-colors duration-500 hover:border-bronze hover:text-bronze disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .field-input {
+    @apply w-full border-0 border-b border-charcoal/25 bg-transparent px-0 py-3 font-sans text-[15px] text-charcoal placeholder:text-charcoal/40 transition-colors duration-300 focus:border-bronze focus:outline-none aria-[invalid=true]:border-red-700;
+  }
+
+  .card-surface {
+    @apply border border-champagne/15 bg-charcoal-soft;
+  }
+}
+
+/* Respect reduced-motion preferences site-wide */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
