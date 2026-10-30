@@ -15,8 +15,8 @@ export default function About() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-12 lg:gap-20 lg:px-10">
         <div className="group lg:col-span-6">
           <RevealImage
-            src="/images/brass-kadhai.png"
-            alt="Mirror-polished brass kadhai with lid in a hospitality dining setting"
+            src="/images/brass-thali.png"
+            alt="Complete polished brass thali dining set in a hospitality dining setting"
             className="aspect-[4/5] w-full"
           />
         </div>

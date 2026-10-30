@@ -41,6 +41,25 @@ export default function Hero() {
       />
 
       <motion.div
+        initial={reduce ? false : { opacity: 0, scale: 0.88, y: -10 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.7, ease: EASE }}
+        className="absolute right-6 top-24 z-10 flex flex-col items-center gap-2 sm:right-8 sm:top-28 lg:right-10 lg:top-32"
+      >
+        <div className="h-20 w-20 overflow-hidden rounded-full border-2 border-champagne bg-charcoal/60 p-1 shadow-2xl shadow-black/30 sm:h-24 sm:w-24">
+          <img
+            src="/images/aakash%20photo.jpeg"
+            alt="Aakash, owner of Shree Polishing And Buffing Service"
+            className="h-full w-full rounded-full object-cover"
+          />
+        </div>
+        <div className="text-center text-ivory">
+          <p className="font-serif text-base leading-none sm:text-lg">Aakash</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.24em] text-champagne">Owner</p>
+        </div>
+      </motion.div>
+
+      <motion.div
         style={reduce ? undefined : { opacity: contentOpacity }}
         className="relative mx-auto w-full max-w-7xl px-6 pb-28 pt-40 lg:px-10 lg:pb-36"
       >

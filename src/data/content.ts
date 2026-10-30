@@ -47,8 +47,8 @@ export const SERVICES: ServiceItem[] = [
     title: "Metalware Restoration",
     description:
       "Improving the appearance of suitable older utensils and metal objects through polishing and finishing.",
-    image: "/images/brass-kadhai.png",
-    alt: "Mirror-polished brass kadhai with lid in a dining setting",
+    image: "/images/brass-thali.png",
+    alt: "Complete polished brass thali dining set in a dining setting",
     formValue: "Metalware Restoration",
   },
   {
@@ -97,9 +97,9 @@ export const GALLERY: GalleryItem[] = [
     ratio: "landscape",
   },
   {
-    src: "/images/brass-kadhai.png",
-    alt: "Polished brass kadhai with lid beside a flower vase",
-    caption: "Brass kadhai",
+    src: "/images/brass-thali.png",
+    alt: "Complete polished brass thali dining set beside a flower vase",
+    caption: "Brass thali set",
     category: "brass",
     ratio: "square",
   },
